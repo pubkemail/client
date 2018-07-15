@@ -1,0 +1,12 @@
+{{ define "top" }}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>{{ index . "title" }}</title>
+  {{ template "style" }}
+  {{ $pricing := index . "pricing" }}
+  {{ if eq $pricing "pricing" -}}
+  {{ template "style_pricing" }}
+  {{ end }}
+</head>
+{{ end }}
